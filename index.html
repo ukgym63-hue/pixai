@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixAI — Free AI Picture Generator</title>
+  <meta name="description" content="Create AI pictures from text prompts with a beautiful, simple interface.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">Pix<span>AI</span></div>
+    <a href="#generator" class="nav-btn">Create Image</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">✨ AI IMAGE GENERATOR</div>
+      <h1>Turn your ideas into <span>pictures.</span></h1>
+      <p>Create stunning images from simple text prompts. Fast, simple and beginner-friendly.</p>
+      <a href="#generator" class="primary">Start Creating →</a>
+    </section>
+
+    <section id="generator" class="generator-card">
+      <div class="card-head">
+        <div>
+          <h2>Create your image</h2>
+          <p>Describe what you want to see.</p>
+        </div>
+        <span class="free-pill">FREE</span>
+      </div>
+
+      <label for="prompt">Your prompt</label>
+      <textarea id="prompt" placeholder="Example: A magical forest at sunset, cinematic lighting, ultra detailed..."></textarea>
+
+      <div class="controls">
+        <div>
+          <label for="style">Style</label>
+          <select id="style">
+            <option>Photorealistic</option>
+            <option>Digital Art</option>
+            <option>Anime</option>
+            <option>3D Render</option>
+            <option>Watercolor</option>
+            <option>Cinematic</option>
+          </select>
+        </div>
+        <div>
+          <label for="ratio">Aspect ratio</label>
+          <select id="ratio">
+            <option value="1:1">Square (1:1)</option>
+            <option value="16:9">Landscape (16:9)</option>
+            <option value="9:16">Portrait (9:16)</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="generate">✨ Generate Picture</button>
+      <p id="status" class="status"></p>
+
+      <div id="result" class="result hidden">
+        <div class="result-placeholder">
+          <div class="sparkle">✦</div>
+          <h3>Your image will appear here</h3>
+          <p>Connect the free image API in <code>js/app.js</code> to enable real generation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips">
+      <h2>Write better prompts</h2>
+      <div class="tip-grid">
+        <div><b>🎯 Be specific</b><p>Describe the subject, place, lighting and mood.</p></div>
+        <div><b>🎨 Choose a style</b><p>Try cinematic, anime, watercolor or photorealistic.</p></div>
+        <div><b>💡 Add details</b><p>Mention colors, camera angle, weather and atmosphere.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 PixAI · Made for creative people</footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
